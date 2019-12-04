@@ -13,7 +13,6 @@ public class CompanyDeviceMain {
 
         for(Company company : companyList){
             writeDataToFile(company.toString());
-
         }
 
     }
