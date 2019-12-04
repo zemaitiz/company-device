@@ -1,14 +1,16 @@
 package companydevice;
 
+import java.util.List;
+
 public class Company {
     private String name;
-    private String adress;
+    private String address;
     private ProductionType productionType;
-    private Device devices;
+    private List<Device> devices;
 
-    public Company(String name, String adress, ProductionType productionType, Device devices) {
+    public Company(String name, String address, ProductionType productionType, List<Device> devices) {
         this.name = name;
-        this.adress = adress;
+        this.address = address;
         this.productionType = productionType;
         this.devices = devices;
     }
@@ -21,12 +23,12 @@ public class Company {
         this.name = name;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public ProductionType getProductionType() {
@@ -37,11 +39,11 @@ public class Company {
         this.productionType = productionType;
     }
 
-    public Device getDevices() {
+    public List<Device> getDevices() {
         return devices;
     }
 
-    public void setDevices(Device devices) {
+    public void setDevices(List<Device> devices) {
         this.devices = devices;
     }
 }

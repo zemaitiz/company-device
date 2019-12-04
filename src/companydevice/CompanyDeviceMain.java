@@ -1,21 +1,18 @@
 package companydevice;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class CompanyDeviceMain {
-    private static final String INPUT_LOCATION = "src/companydevice/Data.txt"
-    private static final String OUTPUT_LOCATION = "src/companydevice/result.txt"
+    private static final String INPUT_LOCATION = "src/companydevice/Data.txt";
+    private static final String OUTPUT_LOCATION = "src/companydevice/result.txt";
 
     public static void main(String[] args) {
         List<Company> companyList = getCompaniesFromFile();
 
         for(Company company : companyList){
             writeDataToFile(company.toString());
-
         }
 
     }
@@ -37,19 +34,19 @@ public class CompanyDeviceMain {
     }
 
     private static Company mapCompanyData(String companyData) {
-        String[] splittedLineArray = companyData.split(";"); // title; authors[]; price; qnt
-        return new Company(splittedLineArray[0], splittedLineArray[1], splittedLineArray[2], mapCompanyDeviceData(splittedLineArray[3]));
+        String[] splittedLineArray = companyData.split(";"); // Company (name, address, production type, devices)
+        return new Company(splittedLineArray[0], splittedLineArray[1], ProductionType.TECHNOLOGIES, mapCompanyDeviceData(splittedLineArray[3]));
     }
 
     private static List<Device> mapCompanyDeviceData(String deviceData){
-        List<Device> deviceList = new ArrayList<>();
+        List<Device> authorList = new ArrayList<>();
 
         String[] splittedLineData = deviceData.split("-"); // name,email,phoneNumber-name,email,phoneNumber
-        for (String deviceData : splittedLineData) {
-            String[] deviceInfoArray = deviceData.split(",");
-            deviceList.add(new Device(deviceInfoArray[0], deviceInfoArray[1], deviceInfoArray[2], deviceInfoArray[3]));
+        for (String devicesData : splittedLineData) {
+            String[] deviceInfoArray = devicesData.split(",");
+            authorList.add(new Device(deviceInfoArray[0], Double.parseDouble(deviceInfoArray[1]), Integer.parseInt(deviceInfoArray[2]), deviceInfoArray[3]));
         }
-        return deviceList;
+        return authorList;
     }
 
     private static void writeDataToFile(String data) {
