@@ -1,5 +1,5 @@
 Mototoya;Ukmerges pl. 100;AUTOMOBILES;Toyota Corolla,27000,3,sport-Toyota Prius,24000,5,electric-Lexus,70000,2,hybrid
 Toyota;Žalgio g. 2;AUTOMOBILES;Toyota Corolla,29000,3,sport-Toyota Prius,26000,5,electric-Lexus,68000,2,hybrid
-Zalioji stotele; Siaurine g. 10;GARDEN_TOOLS;egle,50,100,kilmes salis LT - kenis,100,30,kilmes salis NL
-Komparsa; Baltrusaicio g. 15;TECHNOLOGIES;kamera,1000,10,Sony - kompiuteris,500,10,surinktas LT
+Zalioji stotele; Siaurine g. 10;GARDEN_TOOLS;egle,50,100,kilmes salis LT-kenis,100,30,kilmes salis NL
+Komparsa; Baltrusaicio g. 15;TECHNOLOGIES;kamera,1000,10,Sony-kompiuteris,500,10,surinktas LT
 Nematekas;Basanaviciaus g. 2;FOOD;saldyti koldunai1,3.5,90,su kiauliena-saldyti koldunai2,5,100,su grybais-desreles,2,120,vegetariskos
